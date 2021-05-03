@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Document</title>
+</head>
+<body>
+<input type="text" id="number" name="number" placeholder="Phone number">
+<input type="button" value="Click" onclick="isValid()">
+<script type="text/javascript">
+reg =/^[0-9]{10}/
+function isValid(){
+var a = document.getElementById('number').value;
+if(a.match(reg) ){
+alert('Ok')
+}else{
+alert('not ok');
+}
+}
+</script>
+</body>
+</html>

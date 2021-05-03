@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+// ii vowel is pressed
+function isVowel() {
+var result = document.getElementById("che").value;
+reg = /^[AEIOUaeiou]/;
+if (result.length == 1) {
+if (result.match(reg)) {
+alert(result + " " + "isVowel");
+} else {
+alert(result + " " + "is not Vowel");
+}
+} else {
+alert("Plz enter only one character");
+}
+}
+// after relese color change red
+function keydownFunction() {
+document.getElementById("demo").style.backgroundColor = "green";
+}
+function keyupFunction() {
+document.getElementById("demo").style.backgroundColor = "red";
+}
+function date() {
+var a = new Date();
+document.getElementById("date").innerHTML = a;
+}
+</script>
+Enter character:<input type="text" id="che" name="character" placeholder="Check a vowel or
+not" /><br />
+<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()"
+/><br />
+<input type="button" value="Vowel" onclick="isVowel()" />
+<input type="button" value="Date" onclick="date()" />
+<p id="p"></p>
+<p id="date"></p>
+</body>
+</html>
